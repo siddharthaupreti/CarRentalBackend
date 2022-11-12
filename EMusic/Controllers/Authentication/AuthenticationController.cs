@@ -12,6 +12,7 @@ using System.Net.Http;
 
 namespace EMusic.Controllers.Authentication
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
