@@ -1,6 +1,8 @@
 ﻿using EMusic.Models;
 using EMusic.Models.APIModels;
 using EMusic.Models.APIModels.Login;
+using EMusic.Models.APIModels.Registration;
+using EMusic.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -13,44 +15,72 @@ using System.Net.Http;
 namespace EMusic.Controllers.Authentication
 {
 
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private EMusicContext db = new EMusicContext();
+        private readonly IConfiguration _configuration;
+        private readonly IAuthenticationService _authenticationService;
+        public AuthenticationController(IConfiguration configuration, IAuthenticationService authenticationService)
+        {
+            _configuration= configuration;
+            _authenticationService= authenticationService;
+        }
 
         //api for log in
         [HttpPost]
-        public async Task<IActionResult> LoginUser([FromBody] LoginRequestModel loginRequestModel)
+        public IActionResult LoginUser([FromBody] LoginRequestModel loginRequestModel)
         {
             ResponseModel response = new ResponseModel();
             if (ModelState.IsValid)
             {
                 try
-                {
-                    using(var command = db.Database.GetDbConnection().CreateCommand())
+                 {
+                    LoginResponseModel loginResponseModel= _authenticationService.LoginUser(loginRequestModel);
+
+                    if (loginResponseModel.Status == "Success")
                     {
-                        var parameters = new List<SqlParameter>();
-                        command.CommandText = "Login_sp";
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add(new SqlParameter("@Email", loginRequestModel.Email));
-                        command.Parameters.Add(new SqlParameter("@Password", loginRequestModel.Password));
-                        command.Parameters.Add(new SqlParameter("@UserToken", loginRequestModel.UserToken));
-                        command.Parameters.Add(new SqlParameter("@UserType", loginRequestModel.UserType));
+                        loginResponseModel.UserToken = TokenManager.GenerateToken(loginResponseModel.PhoneNumber);
 
-                        db.Database.OpenConnection();
-
-                        using(var result = command.ExecuteReader())
-                        {
-                            response = new ResponseModel { status = HttpStatusCode.OK, message = "Successfully logged in", data = result };
-                            return Ok(result);
-                        }
+                        response = new ResponseModel() {
+                            data = loginResponseModel, message = loginResponseModel.Message, status = HttpStatusCode.OK };
+                    } else
+                    {
+                        response = new ResponseModel() { data = loginResponseModel, message = loginResponseModel.Message, status = HttpStatusCode.NotFound };                 
                     }
-                    
+                    return Ok(response);
                 }
                 catch (Exception e)
                 {
-                    return Ok();
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for registration
+        [HttpPost]
+        public  IActionResult Registration([FromBody] RegistrationRequestModel registrationRequestModel)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    RegistrationResponseModel registrationResponseModel = _authenticationService.RegisterUser(registrationRequestModel);
+                    if(registrationResponseModel.Status == "Success")
+                    {
+                        responseModel = new ResponseModel() {
+                        data=registrationResponseModel, message=registrationResponseModel.Message, status=HttpStatusCode.OK
+                        };
+                    } else
+                    {
+                        responseModel = new ResponseModel() { data = registrationResponseModel, message = registrationResponseModel.Message, status = HttpStatusCode.NotFound };
+                    }
+                    return Ok(responseModel);
+                }catch(Exception e)
+                {
+                    return BadRequest();
                 }
             }
             return BadRequest();

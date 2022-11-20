@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r081fy2DyrhaAlKNw1Ku0uxU+LhX/Dmuvpg1KewCr2wpUMGbIby8h5ouGGyasgVV8sIuyWBOG++xX5UfeSaTmg==",
+  "dgSpecHash": "RM9eHRZnDJ4ZqnAJzj1jrXiewdv1mbwy/a+9G6UnlrW5Jki43DPpkc18crnoyVI2YPz3GqLwMPNv6nmfyJTu/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\EMusic.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Urusha\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Urusha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Urusha\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Urusha\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
