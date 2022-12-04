@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\EMusic.csproj": {}
+    "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\EMusic.csproj": {
+    "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\EMusic.csproj",
+        "projectUniqueName": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj",
         "projectName": "EMusic",
-        "projectPath": "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\EMusic.csproj",
-        "packagesPath": "C:\\Users\\Urusha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Urusha\\source\\repos\\EMusic\\EMusic\\obj\\",
+        "projectPath": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj",
+        "packagesPath": "C:\\Users\\sid87\\.nuget\\packages\\",
+        "outputPath": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Urusha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sid87\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
