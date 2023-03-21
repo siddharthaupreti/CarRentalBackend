@@ -8,6 +8,7 @@ using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.NotTeachersInstitute;
 using EMusic.Models.APIModels.Registration;
 using EMusic.Models.APIModels.StudentEnrolledCourses;
+using EMusic.Models.APIModels.StudentEnrollmentApplication;
 using EMusic.Models.APIModels.StudentTeachers;
 using EMusic.Models.APIModels.TeacherCourses;
 using EMusic.Models.APIModels.TeacherImageUpload;
@@ -44,6 +45,10 @@ namespace EMusic.Services
         public List<AddTeachersResponse> AddTeachers(AddTeachersRequest addTeachersRequest);
         public List<StudentEnrolledCoursesResponse> StudentEnrolledCourses(StudentEnrolledCoursesRequest studentEnrolledCoursesRequest);
         public List<StudentEnrolledCoursesResponse> StudentUnenrolledCourses(StudentEnrolledCoursesRequest studentEnrolledCoursesRequest);
+        public List<TeacherProfileResponse> StudentProfile(TeacherProfileRequest teacherProfileRequest);
+        public List<TeacherImageResponse> StudentImageUpload(TeacherImageUploadRequest teacherImageUploadRequest);
+        public List<StudentEnrollmentApplicationResponse> StudentEnrollmentApplication(StudentEnrollmentApplicationRequest studentEnrollmentApplicationRequest);
+
 
     }
 
@@ -477,6 +482,67 @@ namespace EMusic.Services
             {
                 string errormsg = ex.Message;
                 return studentUnenrolledCoursesResponseModel;
+            }
+        }
+
+
+        public List<TeacherProfileResponse> StudentProfile(TeacherProfileRequest studentProfileRequest)
+        {
+            List<TeacherProfileResponse> studentProfileResponseModel = new List<TeacherProfileResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentProfileResponseModel = dbConnection.Query<TeacherProfileResponse>("StudentProfile", studentProfileRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentProfileResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentProfileResponseModel;
+            }
+        }
+
+        public List<TeacherImageResponse> StudentImageUpload(TeacherImageUploadRequest studentImageUploadRequest)
+        {
+            List<TeacherImageResponse> studentImageUploadResponseModel = new List<TeacherImageResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<TeacherImageResponse>("StudentImageUpload", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
+        public List<StudentEnrollmentApplicationResponse> StudentEnrollmentApplication(StudentEnrollmentApplicationRequest studentEnrollmentApplicationRequest)
+        {
+            List<StudentEnrollmentApplicationResponse> studentEnrollmentApplicationResponseModel = new List<StudentEnrollmentApplicationResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentEnrollmentApplicationResponseModel = dbConnection.Query<StudentEnrollmentApplicationResponse>("StudentEnrollmentApplication", studentEnrollmentApplicationRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentEnrollmentApplicationResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentEnrollmentApplicationResponseModel;
             }
         }
     }
