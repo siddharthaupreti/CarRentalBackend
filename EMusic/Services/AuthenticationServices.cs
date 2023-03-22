@@ -48,7 +48,8 @@ namespace EMusic.Services
         public List<TeacherProfileResponse> StudentProfile(TeacherProfileRequest teacherProfileRequest);
         public List<TeacherImageResponse> StudentImageUpload(TeacherImageUploadRequest teacherImageUploadRequest);
         public List<StudentEnrollmentApplicationResponse> StudentEnrollmentApplication(StudentEnrollmentApplicationRequest studentEnrollmentApplicationRequest);
-
+        public List<TeacherProfileResponse> InstituteProfile(TeacherProfileRequest teacherProfileRequest);
+        public List<TeacherImageResponse> InstituteImageUpload(TeacherImageUploadRequest teacherImageUploadRequest);
 
     }
 
@@ -545,5 +546,51 @@ namespace EMusic.Services
                 return studentEnrollmentApplicationResponseModel;
             }
         }
+
+        public List<TeacherProfileResponse> InstituteProfile(TeacherProfileRequest instituteProfileRequest)
+        {
+            List<TeacherProfileResponse> instituteProfileResponseModel = new List<TeacherProfileResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    instituteProfileResponseModel = dbConnection.Query<TeacherProfileResponse>("InstituteProfile", instituteProfileRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return instituteProfileResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return instituteProfileResponseModel;
+            }
+        }
+
+        public List<TeacherImageResponse> InstituteImageUpload(TeacherImageUploadRequest studentImageUploadRequest)
+        {
+            List<TeacherImageResponse> studentImageUploadResponseModel = new List<TeacherImageResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<TeacherImageResponse>("InstituteImageUpload", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
+
+
+
+
+
     }
 }

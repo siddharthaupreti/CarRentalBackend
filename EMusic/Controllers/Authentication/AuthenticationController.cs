@@ -682,6 +682,60 @@ namespace EMusic.Controllers.Authentication
             return BadRequest();
         }
 
+        //api for Institute Profile
+        [HttpPost]
+        public IActionResult InstituteProfile([FromBody] TeacherProfileRequest studentProfileRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<TeacherProfileResponse> studentProfileResponseModel = _authenticationService.InstituteProfile(studentProfileRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentProfileResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        //api for Institute Image Upload
+        [HttpPost]
+        public IActionResult InstituteImageUpload([FromBody] TeacherImageUploadRequest studentImageUploadRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<TeacherImageResponse> studentImageUploadResponseModel = _authenticationService.InstituteImageUpload(studentImageUploadRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentImageUploadResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
 
 
     }
