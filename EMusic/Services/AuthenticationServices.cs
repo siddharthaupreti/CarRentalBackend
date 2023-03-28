@@ -3,6 +3,8 @@ using EMusic.Models;
 using EMusic.Models.APIModels.AddCourses;
 using EMusic.Models.APIModels.AddLessons;
 using EMusic.Models.APIModels.AddTeachers;
+using EMusic.Models.APIModels.CourseApplicationApproval;
+using EMusic.Models.APIModels.CourseEnrollmentApplication;
 using EMusic.Models.APIModels.InstituteTeachers;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.NotTeachersInstitute;
@@ -10,7 +12,9 @@ using EMusic.Models.APIModels.Registration;
 using EMusic.Models.APIModels.StudentEnrolledCourses;
 using EMusic.Models.APIModels.StudentEnrollmentApplication;
 using EMusic.Models.APIModels.StudentTeachers;
+using EMusic.Models.APIModels.TeacherApplicationApproval;
 using EMusic.Models.APIModels.TeacherCourses;
+using EMusic.Models.APIModels.TeacherEnorllmentApplication;
 using EMusic.Models.APIModels.TeacherImageUpload;
 using EMusic.Models.APIModels.TeacherProfile;
 using EMusic.Models.APIModels.TeachersApplication;
@@ -50,7 +54,10 @@ namespace EMusic.Services
         public List<StudentEnrollmentApplicationResponse> StudentEnrollmentApplication(StudentEnrollmentApplicationRequest studentEnrollmentApplicationRequest);
         public List<TeacherProfileResponse> InstituteProfile(TeacherProfileRequest teacherProfileRequest);
         public List<TeacherImageResponse> InstituteImageUpload(TeacherImageUploadRequest teacherImageUploadRequest);
-
+        public List<CourseEnrollmentApplicationResponse> CourseEnrollmentApplication(CourseEnrollmentApplicationRequest teacherImageUploadRequest);
+        public List<TeacherEnrollmentApplicationResponse> TeacherEnrollmentApplication(TeacherEnrollmentApplicationRequest teacherImageUploadRequest);
+        public List<CourseApplicationApprovalResponse> CourseApplicationApproval(CourseApplicationApprovalRequest studentImageUploadRequest);
+        public List<TeacherApplicationApprovalResponse> TeacherApplicationApproval(TeacherApplicationApprovalRequest studentImageUploadRequest);
     }
 
     public class AuthenticationServices: IAuthenticationService
@@ -586,6 +593,87 @@ namespace EMusic.Services
                 return studentImageUploadResponseModel;
             }
         }
+
+        public List<CourseEnrollmentApplicationResponse> CourseEnrollmentApplication(CourseEnrollmentApplicationRequest studentImageUploadRequest)
+        {
+            List<CourseEnrollmentApplicationResponse> studentImageUploadResponseModel = new List<CourseEnrollmentApplicationResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<CourseEnrollmentApplicationResponse>("CourseEnrollmentApplication", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
+        public List<TeacherEnrollmentApplicationResponse> TeacherEnrollmentApplication(TeacherEnrollmentApplicationRequest studentImageUploadRequest)
+        {
+            List<TeacherEnrollmentApplicationResponse> studentImageUploadResponseModel = new List<TeacherEnrollmentApplicationResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<TeacherEnrollmentApplicationResponse>("TeacherEnrollmentApplication", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
+        public List<CourseApplicationApprovalResponse> CourseApplicationApproval(CourseApplicationApprovalRequest studentImageUploadRequest)
+        {
+            List<CourseApplicationApprovalResponse> studentImageUploadResponseModel = new List<CourseApplicationApprovalResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<CourseApplicationApprovalResponse>("CourseApplicationApproval", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
+        public List<TeacherApplicationApprovalResponse> TeacherApplicationApproval(TeacherApplicationApprovalRequest studentImageUploadRequest)
+        {
+            List<TeacherApplicationApprovalResponse> studentImageUploadResponseModel = new List<TeacherApplicationApprovalResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    studentImageUploadResponseModel = dbConnection.Query<TeacherApplicationApprovalResponse>("TeacherApplicationApproval", studentImageUploadRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return studentImageUploadResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return studentImageUploadResponseModel;
+            }
+        }
+
 
 
 

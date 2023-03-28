@@ -3,6 +3,8 @@ using EMusic.Models.APIModels;
 using EMusic.Models.APIModels.AddCourses;
 using EMusic.Models.APIModels.AddLessons;
 using EMusic.Models.APIModels.AddTeachers;
+using EMusic.Models.APIModels.CourseApplicationApproval;
+using EMusic.Models.APIModels.CourseEnrollmentApplication;
 using EMusic.Models.APIModels.InstituteTeachers;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.NotTeachersInstitute;
@@ -10,7 +12,9 @@ using EMusic.Models.APIModels.Registration;
 using EMusic.Models.APIModels.StudentEnrolledCourses;
 using EMusic.Models.APIModels.StudentEnrollmentApplication;
 using EMusic.Models.APIModels.StudentTeachers;
+using EMusic.Models.APIModels.TeacherApplicationApproval;
 using EMusic.Models.APIModels.TeacherCourses;
+using EMusic.Models.APIModels.TeacherEnorllmentApplication;
 using EMusic.Models.APIModels.TeacherImageUpload;
 using EMusic.Models.APIModels.TeacherProfile;
 using EMusic.Models.APIModels.TeachersApplication;
@@ -720,6 +724,114 @@ namespace EMusic.Controllers.Authentication
                 try
                 {
                     List<TeacherImageResponse> studentImageUploadResponseModel = _authenticationService.InstituteImageUpload(studentImageUploadRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentImageUploadResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for Course Enrollment Application
+        [HttpPost]
+        public IActionResult CourseEnrollmentApplication([FromBody] CourseEnrollmentApplicationRequest studentImageUploadRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CourseEnrollmentApplicationResponse> studentImageUploadResponseModel = _authenticationService.CourseEnrollmentApplication(studentImageUploadRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentImageUploadResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for Teacher Enrollment Application
+        [HttpPost]
+        public IActionResult TeacherEnrollmentApplication([FromBody] TeacherEnrollmentApplicationRequest studentImageUploadRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<TeacherEnrollmentApplicationResponse> studentImageUploadResponseModel = _authenticationService.TeacherEnrollmentApplication(studentImageUploadRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentImageUploadResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for Course Application APPROVAL
+        [HttpPost]
+        public IActionResult CourseApplicationApproval([FromBody] CourseApplicationApprovalRequest courseEnrollmentApplicationRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CourseApplicationApprovalResponse> studentImageUploadResponseModel = _authenticationService.CourseApplicationApproval(courseEnrollmentApplicationRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = studentImageUploadResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for Teacher Application APPROVAL
+        [HttpPost]
+        public IActionResult TeacherApplicationApproval([FromBody] TeacherApplicationApprovalRequest courseEnrollmentApplicationRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<TeacherApplicationApprovalResponse> studentImageUploadResponseModel = _authenticationService.TeacherApplicationApproval(courseEnrollmentApplicationRequest);
 
                     responseModel = new ResponseModel()
                     {
