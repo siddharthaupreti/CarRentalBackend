@@ -1,7 +1,9 @@
 ﻿using EMusic.Models;
 using EMusic.Models.APIModels;
+using EMusic.Models.APIModels.AdminUpdateUsers;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
+using EMusic.Models.APIModels.ViewUsersAdmin;
 using EMusic.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -86,8 +88,63 @@ namespace EMusic.Controllers.Authentication
             return BadRequest();
         }
 
+        //api for Viewing Users by admin
+        [HttpPost]
+        public IActionResult ViewUsersAdmin([FromBody] ViewUsersAdminRequest viewUsersAdminRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<ViewUsersAdminResponse> teachersInstituteResponseModel = _authenticationService.ViewUsersAdmin(viewUsersAdminRequest);
 
-      
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        //api for update
+        [HttpPost]
+        public IActionResult AdminUpdateUsers([FromBody] AdminUpdateUsersRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<AdminUpdateUsersResponse> teachersInstituteResponseModel = _authenticationService.AdminUpdateUsers(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+
 
 
     }
