@@ -12,5 +12,6 @@
         public string Email { get; set; }
         public string UserType { get; set; }
         public string UserToken { get; set; }
+        public string UserRole { get; set; }   
     }
 }
