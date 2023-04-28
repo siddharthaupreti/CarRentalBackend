@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj": {}
+    "D:\\Group_Work\\fyp-backend\\EMusic\\EMusic.csproj": {}
   },
   "projects": {
-    "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj": {
+    "D:\\Group_Work\\fyp-backend\\EMusic\\EMusic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj",
+        "projectUniqueName": "D:\\Group_Work\\fyp-backend\\EMusic\\EMusic.csproj",
         "projectName": "EMusic",
-        "projectPath": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\EMusic.csproj",
+        "projectPath": "D:\\Group_Work\\fyp-backend\\EMusic\\EMusic.csproj",
         "packagesPath": "C:\\Users\\sid87\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net projects\\e-music 2\\e-music\\EMusic\\obj\\",
+        "outputPath": "D:\\Group_Work\\fyp-backend\\EMusic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,13 +51,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.Owin.Security": {
               "target": "Package",
