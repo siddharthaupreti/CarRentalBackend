@@ -3,6 +3,8 @@ using EMusic.Models.APIModels;
 using EMusic.Models.APIModels.AddAttachment;
 using EMusic.Models.APIModels.AdminUpdateUsers;
 using EMusic.Models.APIModels.ChangePassword;
+using EMusic.Models.APIModels.CreateCar;
+using EMusic.Models.APIModels.GetAllCars;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
 using EMusic.Models.APIModels.ViewAttachmentByID;
@@ -230,6 +232,61 @@ namespace EMusic.Controllers.Authentication
             return BadRequest();
         }
 
+        //api for Creating Car
+
+        [HttpPost]
+        public IActionResult CreateCar([FromBody] CreateCarRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreateCarResponse> teachersInstituteResponseModel = _authenticationService.CreateCar(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for getting all Cars
+
+        [HttpPost]
+        public IActionResult GetAllCars([FromBody] GetAllCarsRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetAllCarsResponse> teachersInstituteResponseModel = _authenticationService.GetAllCars(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
 
 
     }

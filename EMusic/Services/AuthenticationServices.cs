@@ -3,6 +3,8 @@ using EMusic.Models;
 using EMusic.Models.APIModels.AddAttachment;
 using EMusic.Models.APIModels.AdminUpdateUsers;
 using EMusic.Models.APIModels.ChangePassword;
+using EMusic.Models.APIModels.CreateCar;
+using EMusic.Models.APIModels.GetAllCars;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
 using EMusic.Models.APIModels.ViewAttachmentByID;
@@ -21,6 +23,8 @@ namespace EMusic.Services
         public List<ChangePasswordResponse> ChangePassword(ChangePasswordRequest changePasswordRequest);
         public List<AddAttachmentResponse> AddAttachment(AddAttachmentRequest addAttachmentRequest);
         public List<ViewAttachmentByIDResponse> ViewAttachmentByID(ViewAttachmentByIDRequest viewAttachmentByIDRequest);
+        public List<CreateCarResponse> CreateCar(CreateCarRequest viewAttachmentByIDRequest);
+        public List<GetAllCarsResponse> GetAllCars(GetAllCarsRequest getAllCarsRequest);
 
     }
 
@@ -189,5 +193,52 @@ namespace EMusic.Services
                 return viewLessonsResponseModel;
             }
         }
+
+
+        public List<CreateCarResponse> CreateCar(CreateCarRequest changePasswordRequest)
+        {
+            List<CreateCarResponse> viewLessonsResponseModel = new List<CreateCarResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    viewLessonsResponseModel = dbConnection.Query<CreateCarResponse>("CreateCar", changePasswordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return viewLessonsResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return viewLessonsResponseModel;
+            }
+        }
+
+
+
+        public List<GetAllCarsResponse> GetAllCars(GetAllCarsRequest changePasswordRequest)
+        {
+            List<GetAllCarsResponse> viewLessonsResponseModel = new List<GetAllCarsResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    viewLessonsResponseModel = dbConnection.Query<GetAllCarsResponse>("GetAllCars", changePasswordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return viewLessonsResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return viewLessonsResponseModel;
+            }
+        }
+
+
+
+
     }
 }

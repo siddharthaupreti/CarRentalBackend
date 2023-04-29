@@ -17,6 +17,10 @@ public partial class HajurKoCarRentalDb3Context : DbContext
 
     public virtual DbSet<Attachment> Attachments { get; set; }
 
+    public virtual DbSet<Car> Cars { get; set; }
+
+    public virtual DbSet<CurrentStatus> CurrentStatuses { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -42,6 +46,51 @@ public partial class HajurKoCarRentalDb3Context : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Attachment_User_ID");
+        });
+
+        modelBuilder.Entity<Car>(entity =>
+        {
+            entity.Property(e => e.CarId)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("Car_ID");
+            entity.Property(e => e.CarCompany)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Car_Company");
+            entity.Property(e => e.CarImage).HasColumnName("Car_Image");
+            entity.Property(e => e.CarModel)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Car_Model");
+            entity.Property(e => e.CarStatusId).HasColumnName("Car_Status_ID");
+            entity.Property(e => e.CarYear)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Car_Year");
+            entity.Property(e => e.Description)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.PricePerday)
+                .HasColumnType("decimal(18, 0)")
+                .HasColumnName("Price_Perday");
+
+            entity.HasOne(d => d.CarStatus).WithMany(p => p.Cars)
+                .HasForeignKey(d => d.CarStatusId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Current_Status_ID");
+        });
+
+        modelBuilder.Entity<CurrentStatus>(entity =>
+        {
+            entity.ToTable("Current_Status");
+
+            entity.Property(e => e.CurrentStatusId)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("Current_Status_ID");
+            entity.Property(e => e.CurrentStatus1)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Current_Status");
         });
 
         modelBuilder.Entity<Role>(entity =>
