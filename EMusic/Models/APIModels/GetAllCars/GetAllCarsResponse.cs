@@ -4,6 +4,7 @@
     {
         public string Status { get; set; }
         public string Message { get; set; }
+        public Guid Car_ID { get; set; }
         public string Car_Model { get; set; }
         public string Car_Year { get; set; }
         public string Car_Company { get; set; }
