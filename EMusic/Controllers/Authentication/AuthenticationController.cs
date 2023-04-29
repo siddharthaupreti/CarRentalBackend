@@ -5,8 +5,12 @@ using EMusic.Models.APIModels.AdminUpdateUsers;
 using EMusic.Models.APIModels.ChangePassword;
 using EMusic.Models.APIModels.CreateCar;
 using EMusic.Models.APIModels.GetAllCars;
+using EMusic.Models.APIModels.GetCarById;
+using EMusic.Models.APIModels.GetUserDetailsByID;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
+using EMusic.Models.APIModels.UpdateCarDetails;
+using EMusic.Models.APIModels.UpdateCarStatus;
 using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using EMusic.Services;
@@ -275,6 +279,116 @@ namespace EMusic.Controllers.Authentication
                     responseModel = new ResponseModel()
                     {
                         data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        //api for updating car's status
+
+        [HttpPost]
+        public IActionResult UpdateCarStatus([FromBody] UpdateCarStatusRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<UpdateCarStatusResponse> teachersInstituteResponseModel = _authenticationService.UpdateCarStatus(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult UpdateCarDetails([FromBody] UpdateCarDetailsRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<UpdateCarDetailsResponse> teachersInstituteResponseModel = _authenticationService.UpdateCarDetails(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult GetUserById([FromBody] GetUserDetailsByIDRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetUserDetailsByIDResponse> teachersInstituteResponseModel = _authenticationService.GetUserById(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult GetCarById([FromBody] GetCarByIdRequest getCarByIdRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetCarByIdResponse> getCarByIdResponses = _authenticationService.GetCarById(getCarByIdRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getCarByIdResponses,
                         status = HttpStatusCode.OK
                     };
 

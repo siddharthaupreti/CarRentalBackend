@@ -5,8 +5,12 @@ using EMusic.Models.APIModels.AdminUpdateUsers;
 using EMusic.Models.APIModels.ChangePassword;
 using EMusic.Models.APIModels.CreateCar;
 using EMusic.Models.APIModels.GetAllCars;
+using EMusic.Models.APIModels.GetCarById;
+using EMusic.Models.APIModels.GetUserDetailsByID;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
+using EMusic.Models.APIModels.UpdateCarDetails;
+using EMusic.Models.APIModels.UpdateCarStatus;
 using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using Microsoft.Data.SqlClient;
@@ -25,6 +29,10 @@ namespace EMusic.Services
         public List<ViewAttachmentByIDResponse> ViewAttachmentByID(ViewAttachmentByIDRequest viewAttachmentByIDRequest);
         public List<CreateCarResponse> CreateCar(CreateCarRequest viewAttachmentByIDRequest);
         public List<GetAllCarsResponse> GetAllCars(GetAllCarsRequest getAllCarsRequest);
+        public List<UpdateCarStatusResponse> UpdateCarStatus(UpdateCarStatusRequest getAllCarsRequest);
+        public List<UpdateCarDetailsResponse> UpdateCarDetails(UpdateCarDetailsRequest getAllCarsRequest);
+        public List<GetUserDetailsByIDResponse> GetUserById(GetUserDetailsByIDRequest getAllCarsRequest);
+        public List<GetCarByIdResponse> GetCarById(GetCarByIdRequest getCarByIdRequest);
 
     }
 
@@ -234,6 +242,88 @@ namespace EMusic.Services
             {
                 string errormsg = ex.Message;
                 return viewLessonsResponseModel;
+            }
+        }
+
+        public List<UpdateCarStatusResponse> UpdateCarStatus(UpdateCarStatusRequest changePasswordRequest)
+        {
+            List<UpdateCarStatusResponse> viewLessonsResponseModel = new List<UpdateCarStatusResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    viewLessonsResponseModel = dbConnection.Query<UpdateCarStatusResponse>("UpdateCarStatus", changePasswordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return viewLessonsResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return viewLessonsResponseModel;
+            }
+        }
+
+        public List<UpdateCarDetailsResponse> UpdateCarDetails(UpdateCarDetailsRequest changePasswordRequest)
+        {
+            List<UpdateCarDetailsResponse> viewLessonsResponseModel = new List<UpdateCarDetailsResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    viewLessonsResponseModel = dbConnection.Query<UpdateCarDetailsResponse>("UpdateCarDetails", changePasswordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return viewLessonsResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return viewLessonsResponseModel;
+            }
+        }
+
+
+        public List<GetUserDetailsByIDResponse> GetUserById(GetUserDetailsByIDRequest changePasswordRequest)
+        {
+            List<GetUserDetailsByIDResponse> viewLessonsResponseModel = new List<GetUserDetailsByIDResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    viewLessonsResponseModel = dbConnection.Query<GetUserDetailsByIDResponse>("GetUserById", changePasswordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return viewLessonsResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return viewLessonsResponseModel;
+            }
+        }
+
+
+        public List<GetCarByIdResponse> GetCarById(GetCarByIdRequest getCarByIdRequest)
+        {
+            List<GetCarByIdResponse> getCarByIdResponseModel = new List<GetCarByIdResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getCarByIdResponseModel = dbConnection.Query<GetCarByIdResponse>("GetCarById", getCarByIdRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getCarByIdResponseModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getCarByIdResponseModel;
             }
         }
 
