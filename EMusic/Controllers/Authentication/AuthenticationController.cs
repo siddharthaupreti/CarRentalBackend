@@ -1,8 +1,11 @@
 ﻿using EMusic.Models;
 using EMusic.Models.APIModels;
+using EMusic.Models.APIModels.AddAttachment;
 using EMusic.Models.APIModels.AdminUpdateUsers;
+using EMusic.Models.APIModels.ChangePassword;
 using EMusic.Models.APIModels.Login;
 using EMusic.Models.APIModels.Registration;
+using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using EMusic.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -116,7 +119,7 @@ namespace EMusic.Controllers.Authentication
         }
 
 
-        //api for update
+        //api for updating users details
         [HttpPost]
         public IActionResult AdminUpdateUsers([FromBody] AdminUpdateUsersRequest adminUpdateUsersRequest)
         {
@@ -143,7 +146,89 @@ namespace EMusic.Controllers.Authentication
             return BadRequest();
         }
 
+        //api for changing user's password
+        [HttpPost]
+        public IActionResult ChangePassword([FromBody] ChangePasswordRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<ChangePasswordResponse> teachersInstituteResponseModel = _authenticationService.ChangePassword(adminUpdateUsersRequest);
 
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        //api for adding user's attachment
+
+        [HttpPost]
+        public IActionResult AddAttachment([FromBody] AddAttachmentRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<AddAttachmentResponse> teachersInstituteResponseModel = _authenticationService.AddAttachment(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        //api for adding user's attachment
+
+        [HttpPost]
+        public IActionResult ViewAttachmentByID([FromBody] ViewAttachmentByIDRequest adminUpdateUsersRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<ViewAttachmentByIDResponse> teachersInstituteResponseModel = _authenticationService.ViewAttachmentByID(adminUpdateUsersRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = teachersInstituteResponseModel,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
 
 
 

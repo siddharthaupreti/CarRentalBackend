@@ -17,5 +17,7 @@ public partial class User
 
     public byte[]? Password { get; set; }
 
+    public virtual ICollection<Attachment> Attachments { get; set; } = new List<Attachment>();
+
     public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

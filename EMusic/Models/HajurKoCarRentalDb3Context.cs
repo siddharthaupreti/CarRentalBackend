@@ -15,6 +15,8 @@ public partial class HajurKoCarRentalDb3Context : DbContext
     {
     }
 
+    public virtual DbSet<Attachment> Attachments { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -26,6 +28,22 @@ public partial class HajurKoCarRentalDb3Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Attachment>(entity =>
+        {
+            entity.ToTable("Attachment");
+
+            entity.Property(e => e.AttachmentId)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("Attachment_ID");
+            entity.Property(e => e.Attachment1).HasColumnName("Attachment");
+            entity.Property(e => e.UserId).HasColumnName("User_ID");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Attachments)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Attachment_User_ID");
+        });
+
         modelBuilder.Entity<Role>(entity =>
         {
             entity.ToTable("Role");
