@@ -1,0 +1,319 @@
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\appsettings.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\EMusic.exe
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\EMusic.deps.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\EMusic.runtimeconfig.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\EMusic.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\EMusic.pdb
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.csproj.AssemblyReference.cache
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfoInputs.cache
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfo.cs
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.csproj.CoreCompileInputs.cache
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\scopedcss\bundle\EMusic.styles.css
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.csproj.CopyComplete
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\refint\EMusic.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.pdb
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\EMusic.genruntimeconfig.cache
+C:\Users\Urusha\source\repos\EMusic\EMusic\obj\Debug\net6.0\ref\EMusic.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Owin.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Owin.dll
+C:\Users\Urusha\source\repos\EMusic\EMusic\bin\Debug\net6.0\Dapper.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\appsettings.Development.json
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\appsettings.json
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\EMusic.exe
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\EMusic.deps.json
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\EMusic.runtimeconfig.json
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\EMusic.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\EMusic.pdb
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Dapper.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Humanizer.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Owin.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Owin.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\.Net projects\e-music 2\e-music\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.csproj.AssemblyReference.cache
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfoInputs.cache
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfo.cs
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.csproj.CoreCompileInputs.cache
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cs
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cache
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.EMusic.Microsoft.AspNetCore.StaticWebAssets.props
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.build.EMusic.props
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EMusic.props
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EMusic.props
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets.pack.json
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets.build.json
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\staticwebassets.development.json
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\scopedcss\bundle\EMusic.styles.css
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.csproj.CopyComplete
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.dll
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\refint\EMusic.dll
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.pdb
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\EMusic.genruntimeconfig.cache
+D:\.Net projects\e-music 2\e-music\EMusic\obj\Debug\net6.0\ref\EMusic.dll
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.csproj.AssemblyReference.cache
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfoInputs.cache
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfo.cs
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.csproj.CoreCompileInputs.cache
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cs
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cache
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.dll
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\refint\EMusic.dll
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.pdb
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\appsettings.Development.json
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\appsettings.json
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\EMusic.exe
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\EMusic.deps.json
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\EMusic.runtimeconfig.json
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\EMusic.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\EMusic.pdb
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Dapper.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Humanizer.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Owin.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Owin.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.CodeDom.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Text.Json.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.EMusic.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.build.EMusic.props
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EMusic.props
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EMusic.props
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets.build.json
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\staticwebassets.development.json
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\scopedcss\bundle\EMusic.styles.css
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.csproj.CopyComplete
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\EMusic.genruntimeconfig.cache
+D:\Group_Work\fyp-backend\EMusic\obj\Debug\net6.0\ref\EMusic.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Azure.Core.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Azure.Identity.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\Group_Work\fyp-backend\EMusic\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\appsettings.Development.json
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\appsettings.json
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\EMusic.exe
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\EMusic.deps.json
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\EMusic.runtimeconfig.json
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\EMusic.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\EMusic.pdb
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Azure.Core.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Azure.Identity.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Dapper.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Humanizer.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Owin.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Owin.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.CodeDom.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Text.Json.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Group_Work\HajurKoCarRental\EMusic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.csproj.AssemblyReference.cache
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfoInputs.cache
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.AssemblyInfo.cs
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.csproj.CoreCompileInputs.cache
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cs
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.MvcApplicationPartsAssemblyInfo.cache
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.EMusic.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.build.EMusic.props
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EMusic.props
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EMusic.props
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets.build.json
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\staticwebassets.development.json
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\scopedcss\bundle\EMusic.styles.css
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.csproj.CopyComplete
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.dll
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\refint\EMusic.dll
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.pdb
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\EMusic.genruntimeconfig.cache
+D:\Group_Work\HajurKoCarRental\EMusic\obj\Debug\net6.0\ref\EMusic.dll
