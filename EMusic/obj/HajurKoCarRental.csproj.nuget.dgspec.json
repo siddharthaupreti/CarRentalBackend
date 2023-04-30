@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Group_Work\\HajurKoCarRental\\EMusic\\EMusic.csproj": {}
+    "D:\\Group_Work\\HajurKoCarRental\\EMusic\\HajurKoCarRental.csproj": {}
   },
   "projects": {
-    "D:\\Group_Work\\HajurKoCarRental\\EMusic\\EMusic.csproj": {
+    "D:\\Group_Work\\HajurKoCarRental\\EMusic\\HajurKoCarRental.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Group_Work\\HajurKoCarRental\\EMusic\\EMusic.csproj",
-        "projectName": "EMusic",
-        "projectPath": "D:\\Group_Work\\HajurKoCarRental\\EMusic\\EMusic.csproj",
+        "projectUniqueName": "D:\\Group_Work\\HajurKoCarRental\\EMusic\\HajurKoCarRental.csproj",
+        "projectName": "HajurKoCarRental",
+        "projectPath": "D:\\Group_Work\\HajurKoCarRental\\EMusic\\HajurKoCarRental.csproj",
         "packagesPath": "C:\\Users\\sid87\\.nuget\\packages\\",
         "outputPath": "D:\\Group_Work\\HajurKoCarRental\\EMusic\\obj\\",
         "projectStyle": "PackageReference",
