@@ -16,7 +16,10 @@ using EMusic.Models.APIModels.ViewUsersAdmin;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
+using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
+using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
+using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using System.Data;
@@ -42,6 +45,9 @@ namespace EMusic.Services
         public List<GetAllRentHistoryResponse> GetRentHistoryByUserID(GetAllRentHistoryRequest getAllRentHistoryRequest);
         public List<ChangeReturnStatusRentHistoryResponse> ChangeReturnStatusRentHistory(ChangeReturnStatusRentHistoryRequest getAllRentHistoryRequest);
         public List<CreateDamageLogResponse> CreateDamageLog(CreateDamageLogRequest createDamageLogRequest);
+        public List<GetDamageLogByUserIDResponse> GetDamageLogByUserID(GetDamageLogByUserIDRequest getDamageLogByUserID);
+        public List<DamageLogSetPayedResponse> DamageLogSetPayed(DamageLogSetPayedRequest damageLogSetPayedRequest);
+        public List<DeleteCarResponse> DeleteCarRecord(DeleteCarRecordRequest deleteCarRecordRequest);
 
     }
 
@@ -435,6 +441,66 @@ namespace EMusic.Services
             {
                 string errormsg = ex.Message;
                 return createDamageLogResponses;
+            }
+        }
+
+        public List<GetDamageLogByUserIDResponse> GetDamageLogByUserID(GetDamageLogByUserIDRequest getDamageLogByUserID)
+        {
+            List<GetDamageLogByUserIDResponse> getDamageLogByUserIDResponses = new List<GetDamageLogByUserIDResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getDamageLogByUserIDResponses = dbConnection.Query<GetDamageLogByUserIDResponse>("GetDamageLogByUserID", getDamageLogByUserID, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getDamageLogByUserIDResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getDamageLogByUserIDResponses;
+            }
+        }
+
+        public List<DamageLogSetPayedResponse> DamageLogSetPayed(DamageLogSetPayedRequest damageLogSetPayedRequest)
+        {
+            List<DamageLogSetPayedResponse> damageLogSetPayedResponses = new List<DamageLogSetPayedResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    damageLogSetPayedResponses = dbConnection.Query<DamageLogSetPayedResponse>("DamageLogSetPayed", damageLogSetPayedRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return damageLogSetPayedResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return damageLogSetPayedResponses;
+            }
+        }
+
+        public List<DeleteCarResponse> DeleteCarRecord(DeleteCarRecordRequest deleteCarRecordRequest)
+        {
+            List<DeleteCarResponse> deleteCarResponses = new List<DeleteCarResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    deleteCarResponses = dbConnection.Query<DeleteCarResponse>("DeleteCarRecord", deleteCarRecordRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return deleteCarResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return deleteCarResponses;
             }
         }
 

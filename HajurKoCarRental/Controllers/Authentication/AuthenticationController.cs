@@ -17,7 +17,10 @@ using EMusic.Services;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
+using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
+using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
+using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -540,6 +543,87 @@ namespace EMusic.Controllers.Authentication
             return BadRequest();
         }
 
+        [HttpPost]
+        public IActionResult GetDamageLogByUserID([FromBody] GetDamageLogByUserIDRequest getDamageLogByUserIDRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetDamageLogByUserIDResponse> getDamageLogByUserIDResponses = _authenticationService.GetDamageLogByUserID(getDamageLogByUserIDRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getDamageLogByUserIDResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult DamageLogSetPayed([FromBody] DamageLogSetPayedRequest damageLogSetPayedRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<DamageLogSetPayedResponse> damageLogSetPayedResponses = _authenticationService.DamageLogSetPayed(damageLogSetPayedRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = damageLogSetPayedResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+
+        [HttpPost]
+        public IActionResult DeleteCarRecord([FromBody] DeleteCarRecordRequest deleteCarRecordRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<DeleteCarResponse> deleteCarResponses = _authenticationService.DeleteCarRecord(deleteCarRecordRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = deleteCarResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+        
 
 
 
