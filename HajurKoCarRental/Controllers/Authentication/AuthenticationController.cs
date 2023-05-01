@@ -15,12 +15,17 @@ using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using EMusic.Services;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
+using HajurKoCarRental.Models.APIModels.CreateApproval;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreatePayment;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
 using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
+using HajurKoCarRental.Models.APIModels.DeleteApprovalRequests;
 using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
+using HajurKoCarRental.Models.APIModels.GetAllApproval;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
+using HajurKoCarRental.Models.APIModels.GetPaymentByID;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -623,7 +628,139 @@ namespace EMusic.Controllers.Authentication
             }
             return BadRequest();
         }
-        
+
+        [HttpPost]
+        public IActionResult CreateApprovalRequest([FromBody] CreateApprovalRequest createApprovalRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreateApprovalResponse> createApprovalResponses = _authenticationService.CreateApprovalRequest(createApprovalRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = createApprovalResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult CreatePayment([FromBody] CreatePaymentRequest createPaymentRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreatePaymentResponse> createPaymentResponses = _authenticationService.CreatePayment(createPaymentRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = createPaymentResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult GetAllApprovalRequests([FromBody] GetAllApprovalRequest getAllApprovalRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetAllApprovalResponse> getAllApprovalResponses = _authenticationService.GetAllApprovalRequests(getAllApprovalRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getAllApprovalResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult DeleteApprovalRequests([FromBody] DeleteApprovalRequest deleteApprovalRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<DeleteApprovalResponse> deleteApprovalResponses = _authenticationService.DeleteApprovalRequests(deleteApprovalRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = deleteApprovalResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult GetPaymentByID([FromBody] GetPaymentByIDRequest getPaymentByIDRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetPaymentByIDResponse> getPaymentByIDResponses = _authenticationService.GetPaymentByID(getPaymentByIDRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getPaymentByIDResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
 
 
 

@@ -14,12 +14,17 @@ using EMusic.Models.APIModels.UpdateCarStatus;
 using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
+using HajurKoCarRental.Models.APIModels.CreateApproval;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreatePayment;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
 using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
+using HajurKoCarRental.Models.APIModels.DeleteApprovalRequests;
 using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
+using HajurKoCarRental.Models.APIModels.GetAllApproval;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
+using HajurKoCarRental.Models.APIModels.GetPaymentByID;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using System.Data;
@@ -48,6 +53,11 @@ namespace EMusic.Services
         public List<GetDamageLogByUserIDResponse> GetDamageLogByUserID(GetDamageLogByUserIDRequest getDamageLogByUserID);
         public List<DamageLogSetPayedResponse> DamageLogSetPayed(DamageLogSetPayedRequest damageLogSetPayedRequest);
         public List<DeleteCarResponse> DeleteCarRecord(DeleteCarRecordRequest deleteCarRecordRequest);
+        public List<CreateApprovalResponse> CreateApprovalRequest(CreateApprovalRequest createApprovalRequest);
+        public List<CreatePaymentResponse> CreatePayment(CreatePaymentRequest createPaymentRequest);
+        public List<GetAllApprovalResponse> GetAllApprovalRequests(GetAllApprovalRequest getAllApprovalRequest);
+        public List<DeleteApprovalResponse> DeleteApprovalRequests(DeleteApprovalRequest deleteApprovalRequest);
+        public List<GetPaymentByIDResponse> GetPaymentByID(GetPaymentByIDRequest getPaymentByIDRequest);
 
     }
 
@@ -501,6 +511,105 @@ namespace EMusic.Services
             {
                 string errormsg = ex.Message;
                 return deleteCarResponses;
+            }
+        }
+
+
+        public List<CreateApprovalResponse> CreateApprovalRequest(CreateApprovalRequest createApprovalRequest)
+        {
+            List<CreateApprovalResponse> createApprovalResponses = new List<CreateApprovalResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    createApprovalResponses = dbConnection.Query<CreateApprovalResponse>("CreateApprovalRequest", createApprovalRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return createApprovalResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return createApprovalResponses;
+            }
+        }
+
+        public List<CreatePaymentResponse> CreatePayment(CreatePaymentRequest createPaymentRequest)
+        {
+            List<CreatePaymentResponse> createApprovalResponses = new List<CreatePaymentResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    createApprovalResponses = dbConnection.Query<CreatePaymentResponse>("CreatePayment", createPaymentRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return createApprovalResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return createApprovalResponses;
+            }
+        }
+        public List<GetAllApprovalResponse> GetAllApprovalRequests(GetAllApprovalRequest getAllApprovalRequest)
+        {
+            List<GetAllApprovalResponse> getAllApprovalResponses = new List<GetAllApprovalResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getAllApprovalResponses = dbConnection.Query<GetAllApprovalResponse>("GetAllApprovalRequests", getAllApprovalRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getAllApprovalResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getAllApprovalResponses;
+            }
+        }
+        public List<DeleteApprovalResponse> DeleteApprovalRequests(DeleteApprovalRequest deleteApprovalRequest)
+        {
+            List<DeleteApprovalResponse> deleteApprovalResponses = new List<DeleteApprovalResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    deleteApprovalResponses = dbConnection.Query<DeleteApprovalResponse>("DeleteApprovalRequests", deleteApprovalRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return deleteApprovalResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return deleteApprovalResponses;
+            }
+        }
+
+        public List<GetPaymentByIDResponse> GetPaymentByID(GetPaymentByIDRequest getPaymentByIDRequest)
+        {
+            List<GetPaymentByIDResponse> getPaymentByIDResponses = new List<GetPaymentByIDResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getPaymentByIDResponses = dbConnection.Query<GetPaymentByIDResponse>("GetPaymentByID", getPaymentByIDRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getPaymentByIDResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getPaymentByIDResponses;
             }
         }
 

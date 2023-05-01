@@ -12,5 +12,6 @@
         public string ApprovedDate { get; set; }
         public string ReturnedDate { get; set; }
         public string ReturnStatusName { get; set; }
+        public string Payment { get; set; }
     }
 }
