@@ -14,6 +14,10 @@ using EMusic.Models.APIModels.UpdateCarStatus;
 using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
 using EMusic.Services;
+using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
+using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreateRentHistory;
+using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -401,6 +405,143 @@ namespace EMusic.Controllers.Authentication
             }
             return BadRequest();
         }
+
+
+        [HttpPost]
+        public IActionResult CreateRentHistory([FromBody] CreateRentHistoryRequest createRentHistoryRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreateRentHistoryResponse> createRentHistoryResponses = _authenticationService.CreateRentHistory(createRentHistoryRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = createRentHistoryResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult GetAllRentHistory([FromBody] GetAllRentHistoryRequest getAllRentHistoryRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetAllRentHistoryResponse> getAllRentHistoryResponses = _authenticationService.GetAllRentHistory(getAllRentHistoryRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getAllRentHistoryResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+
+        [HttpPost]
+        public IActionResult GetRentHistoryByUserID([FromBody] GetAllRentHistoryRequest getAllRentHistoryRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetAllRentHistoryResponse> getAllRentHistoryResponses = _authenticationService.GetRentHistoryByUserID(getAllRentHistoryRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getAllRentHistoryResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult ChangeReturnStatusRentHistory([FromBody] ChangeReturnStatusRentHistoryRequest changeReturnStatusRentHistoryRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<ChangeReturnStatusRentHistoryResponse> changeReturnStatusRentHistoryResponses = _authenticationService.ChangeReturnStatusRentHistory(changeReturnStatusRentHistoryRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = changeReturnStatusRentHistoryResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult CreateDamageLog([FromBody] CreateDamageLogRequest createDamageLogRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreateDamageLogResponse> createDamageLogResponses = _authenticationService.CreateDamageLog(createDamageLogRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = createDamageLogResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+
 
 
     }

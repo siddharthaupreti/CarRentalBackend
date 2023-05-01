@@ -13,6 +13,10 @@ using EMusic.Models.APIModels.UpdateCarDetails;
 using EMusic.Models.APIModels.UpdateCarStatus;
 using EMusic.Models.APIModels.ViewAttachmentByID;
 using EMusic.Models.APIModels.ViewUsersAdmin;
+using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
+using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreateRentHistory;
+using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using System.Data;
@@ -33,6 +37,11 @@ namespace EMusic.Services
         public List<UpdateCarDetailsResponse> UpdateCarDetails(UpdateCarDetailsRequest getAllCarsRequest);
         public List<GetUserDetailsByIDResponse> GetUserById(GetUserDetailsByIDRequest getAllCarsRequest);
         public List<GetCarByIdResponse> GetCarById(GetCarByIdRequest getCarByIdRequest);
+        public List<CreateRentHistoryResponse> CreateRentHistory(CreateRentHistoryRequest createRentHistoryRequest);
+        public List<GetAllRentHistoryResponse> GetAllRentHistory(GetAllRentHistoryRequest getAllRentHistoryRequest);
+        public List<GetAllRentHistoryResponse> GetRentHistoryByUserID(GetAllRentHistoryRequest getAllRentHistoryRequest);
+        public List<ChangeReturnStatusRentHistoryResponse> ChangeReturnStatusRentHistory(ChangeReturnStatusRentHistoryRequest getAllRentHistoryRequest);
+        public List<CreateDamageLogResponse> CreateDamageLog(CreateDamageLogRequest createDamageLogRequest);
 
     }
 
@@ -328,6 +337,106 @@ namespace EMusic.Services
         }
 
 
+        public List<CreateRentHistoryResponse> CreateRentHistory(CreateRentHistoryRequest createRentHistoryRequest)
+        {
+            List<CreateRentHistoryResponse> createRentHistoryResponses = new List<CreateRentHistoryResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    createRentHistoryResponses = dbConnection.Query<CreateRentHistoryResponse>("CreateRentHistory", createRentHistoryRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return createRentHistoryResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return createRentHistoryResponses;
+            }
+        }
+
+
+        public List<GetAllRentHistoryResponse> GetAllRentHistory(GetAllRentHistoryRequest getAllRentHistoryRequest)
+        {
+            List<GetAllRentHistoryResponse> getAllRentHistoryResponses = new List<GetAllRentHistoryResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getAllRentHistoryResponses = dbConnection.Query<GetAllRentHistoryResponse>("GetAllRentHistory", getAllRentHistoryRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getAllRentHistoryResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getAllRentHistoryResponses;
+            }
+        }
+
+        public List<GetAllRentHistoryResponse> GetRentHistoryByUserID(GetAllRentHistoryRequest getAllRentHistoryRequest)
+        {
+            List<GetAllRentHistoryResponse> getAllRentHistoryResponses = new List<GetAllRentHistoryResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getAllRentHistoryResponses = dbConnection.Query<GetAllRentHistoryResponse>("GetRentHistoryByUserID", getAllRentHistoryRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getAllRentHistoryResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getAllRentHistoryResponses;
+            }
+        }
+
+        public List<ChangeReturnStatusRentHistoryResponse> ChangeReturnStatusRentHistory(ChangeReturnStatusRentHistoryRequest getAllRentHistoryRequest)
+        {
+            List<ChangeReturnStatusRentHistoryResponse> changeReturnStatusRentHistoryResponses = new List<ChangeReturnStatusRentHistoryResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    changeReturnStatusRentHistoryResponses = dbConnection.Query<ChangeReturnStatusRentHistoryResponse>("ChangeReturnStatusRentHistory", getAllRentHistoryRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return changeReturnStatusRentHistoryResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return changeReturnStatusRentHistoryResponses;
+            }
+        }
+
+        public List<CreateDamageLogResponse> CreateDamageLog(CreateDamageLogRequest createDamageLogRequest)
+        {
+            List<CreateDamageLogResponse> createDamageLogResponses = new List<CreateDamageLogResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    createDamageLogResponses = dbConnection.Query<CreateDamageLogResponse>("CreateDamageLog", createDamageLogRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return createDamageLogResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return createDamageLogResponses;
+            }
+        }
 
 
     }
