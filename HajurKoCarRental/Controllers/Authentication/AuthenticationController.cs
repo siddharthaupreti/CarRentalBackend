@@ -17,14 +17,17 @@ using EMusic.Services;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
 using HajurKoCarRental.Models.APIModels.CreateApproval;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreateNotification;
 using HajurKoCarRental.Models.APIModels.CreatePayment;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
 using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
 using HajurKoCarRental.Models.APIModels.DeleteApprovalRequests;
 using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
+using HajurKoCarRental.Models.APIModels.DeleteNotificationByID;
 using HajurKoCarRental.Models.APIModels.GetAllApproval;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
+using HajurKoCarRental.Models.APIModels.GetNotificationByID;
 using HajurKoCarRental.Models.APIModels.GetPaymentByID;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -748,6 +751,86 @@ namespace EMusic.Controllers.Authentication
                     responseModel = new ResponseModel()
                     {
                         data = getPaymentByIDResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult CreateNotification([FromBody] CreateNotificationRequest createNotificationRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<CreateNotificationResponse> createNotificationResponses = _authenticationService.CreateNotification(createNotificationRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = createNotificationResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public IActionResult DeleteNotificationByID([FromBody] DeleteNotificationByIDRequest deleteNotificationByIDRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<DeleteNotificationByIDResponse> deleteNotificationByIDResponses = _authenticationService.DeleteNotificationByID(deleteNotificationByIDRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = deleteNotificationByIDResponses,
+                        status = HttpStatusCode.OK
+                    };
+
+                    return Ok(responseModel);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult GetNotificationByID([FromBody] GetNotificationByIDRequest getNotificationByIDRequest)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    List<GetNotificationByIDResponse> getNotificationByIDResponses = _authenticationService.GetNotificationByID(getNotificationByIDRequest);
+
+                    responseModel = new ResponseModel()
+                    {
+                        data = getNotificationByIDResponses,
                         status = HttpStatusCode.OK
                     };
 

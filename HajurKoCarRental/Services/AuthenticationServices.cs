@@ -16,14 +16,17 @@ using EMusic.Models.APIModels.ViewUsersAdmin;
 using HajurKoCarRental.Models.APIModels.ChangeReturnStatusRentHistory;
 using HajurKoCarRental.Models.APIModels.CreateApproval;
 using HajurKoCarRental.Models.APIModels.CreateDamageLog;
+using HajurKoCarRental.Models.APIModels.CreateNotification;
 using HajurKoCarRental.Models.APIModels.CreatePayment;
 using HajurKoCarRental.Models.APIModels.CreateRentHistory;
 using HajurKoCarRental.Models.APIModels.DamageLogSetPayed;
 using HajurKoCarRental.Models.APIModels.DeleteApprovalRequests;
 using HajurKoCarRental.Models.APIModels.DeleteCarRecord;
+using HajurKoCarRental.Models.APIModels.DeleteNotificationByID;
 using HajurKoCarRental.Models.APIModels.GetAllApproval;
 using HajurKoCarRental.Models.APIModels.GetAllRentHistory;
 using HajurKoCarRental.Models.APIModels.GetDamageLogByUserID;
+using HajurKoCarRental.Models.APIModels.GetNotificationByID;
 using HajurKoCarRental.Models.APIModels.GetPaymentByID;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
@@ -58,6 +61,9 @@ namespace EMusic.Services
         public List<GetAllApprovalResponse> GetAllApprovalRequests(GetAllApprovalRequest getAllApprovalRequest);
         public List<DeleteApprovalResponse> DeleteApprovalRequests(DeleteApprovalRequest deleteApprovalRequest);
         public List<GetPaymentByIDResponse> GetPaymentByID(GetPaymentByIDRequest getPaymentByIDRequest);
+        public List<CreateNotificationResponse> CreateNotification(CreateNotificationRequest createNotificationRequest);
+        public List<GetNotificationByIDResponse> GetNotificationByID(GetNotificationByIDRequest getNotificationByIDRequest);
+        public List<DeleteNotificationByIDResponse> DeleteNotificationByID(DeleteNotificationByIDRequest deleteNotificationByIDRequest);
 
     }
 
@@ -613,6 +619,66 @@ namespace EMusic.Services
             }
         }
 
+
+        public List<CreateNotificationResponse> CreateNotification(CreateNotificationRequest createNotificationRequest)
+        {
+            List<CreateNotificationResponse> getPaymentByIDResponses = new List<CreateNotificationResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getPaymentByIDResponses = dbConnection.Query<CreateNotificationResponse>("CreateNotification", createNotificationRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getPaymentByIDResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getPaymentByIDResponses;
+            }
+        }
+
+        public List<GetNotificationByIDResponse> GetNotificationByID(GetNotificationByIDRequest getNotificationByIDRequest)
+        {
+            List<GetNotificationByIDResponse> getNotificationByIDResponses = new List<GetNotificationByIDResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    getNotificationByIDResponses = dbConnection.Query<GetNotificationByIDResponse>("GetNotificationByID", getNotificationByIDRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return getNotificationByIDResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return getNotificationByIDResponses;
+            }
+        }
+
+        public List<DeleteNotificationByIDResponse> DeleteNotificationByID(DeleteNotificationByIDRequest deleteNotificationByIDRequest)
+        {
+            List<DeleteNotificationByIDResponse> deleteNotificationByIDResponses = new List<DeleteNotificationByIDResponse>();
+            try
+            {
+                using (IDbConnection dbConnection = Connection)
+                {
+                    dbConnection.Open();
+                    deleteNotificationByIDResponses = dbConnection.Query<DeleteNotificationByIDResponse>("DeleteNotificationByID", deleteNotificationByIDRequest, commandType: CommandType.StoredProcedure).ToList();
+                    dbConnection.Close();
+                    return deleteNotificationByIDResponses;
+                }
+            }
+            catch (Exception ex)
+            {
+                string errormsg = ex.Message;
+                return deleteNotificationByIDResponses;
+            }
+        }
 
     }
 }
