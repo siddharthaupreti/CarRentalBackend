@@ -6,5 +6,7 @@
         public string FullName { get; set; }
         public string CarModel { get; set; }
         public string RequestedDate { get; set; }
+        public Guid UserID { get; set; }
+        public Guid CarID { get; set; }
     }
 }

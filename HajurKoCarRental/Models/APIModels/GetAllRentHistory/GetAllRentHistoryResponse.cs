@@ -13,5 +13,7 @@
         public string ReturnedDate { get; set; }
         public string ReturnStatusName { get; set; }
         public string Payment { get; set; }
+        public Guid CarID { get; set; }
+        public Guid UserID { get; set; }
     }
 }
